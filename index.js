@@ -14,31 +14,63 @@ console.log(removeDuplicate(str));
 
 
 //2. sort an array in ascending order without usingsort logic
-// let arr=[2,3,5,7,4,1,6,9]
-// let n=arr.length
-// function sortArray(arr)
+
+let arr=[2,3,5,7,4,1,6,9]
+let n=arr.length
+function sortArray(arr)
+{
+
+for (i=0;i<n;i++)
+    {
+        for(j=0;j<n-1;j++)
+        {
+            if(arr[j]>arr[j+1]){
+
+            let temp=arr[j];
+            arr[j]=arr[j+1];
+            arr[j+1]=temp
+
+            }
+        }
+    } 
+    
+    return arr;
+    
+    
+}
+
+console.log(sortArray(arr));
+
+
+
+
+
+
+// find the second largest number in array
+
+
+// let arr=[5,7,3,8,4,10];
+// n=arr.length;
+// for(i=0;i<n;i++)
 // {
-
-// for (i=0;i<n;i++)
+//     for(j=0;j<n-i;j++)
 //     {
-//         for(j=0;j<n-1;j++)
+//         if(arr[j]>arr[j+1])
 //         {
-//             if(arr[j]>arr[j+1]){
-
-//             let temp=arr[j];
+//             temp=arr[j];
 //             arr[j]=arr[j+1];
-//             arr[j+1]=temp
-
-//             }
+//             arr[j+1]=temp;
+           
 //         }
-//     } 
-    
-//     return arr;
-    
-    
+
+//     }
+
+   
 // }
 
-// console.log(sortArray(arr));
+//  console.log(arr[n-2]);
+
+
 
 
 
@@ -93,28 +125,61 @@ function myMap(arr, callback) {
 
 // decending order withot using a sort
 
-let arr=[2,3,5,7,4,1,6,9]
-let n=arr.length
-function sortArray(arr)
-{
+// let arr=[2,3,5,7,4,1,6,9]
+// let n=arr.length
+// function sortArray(arr)
+// {
 
-for (i=0;i<n;i++)
-    {
-        for(j=0;j<n-1;j++)
-        {
-            if(arr[j+1]>arr[j]){
+// for (i=0;i<n;i++)
+//     {
+//         for(j=0;j<n-1;j++)
+//         {
+//             if(arr[j+1]>arr[j]){
 
-            let temp=arr[j];
-            arr[j]=arr[j+1];
-            arr[j+1]=temp
+//             let temp=arr[j];
+//             arr[j]=arr[j+1];
+//             arr[j+1]=temp
 
-            }
-        }
-    } 
+//             }
+//         }
+//     } 
     
-    return arr;
+//     return arr;
     
     
+// }
+
+// console.log(sortArray(arr));
+
+
+
+
+
+
+
+// count the frencency of characters in a string
+
+let result="pineapple"
+
+function countCharFrequency(str) {
+  let freq = {};   
+  for (let i = 0; i < str.length; i++) {   
+    let char = str[i];   
+
+    if (freq[char]) {        
+      
+      freq[char]++;         
+      
+    } else {
+      freq[char] = 1;       
+      
+    }
+  }
+
+  return freq; 
+  
+
 }
 
-console.log(sortArray(arr));
+
+console.log(countCharFrequency(result))
