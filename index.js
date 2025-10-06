@@ -198,22 +198,46 @@
 
 
 
-let arr=["apple","orange","grape","apple","orange","apple"]
+// let arr=["apple","orange","grape","apple","orange","apple"]
 
-let count={}
-for(i=0;i<arr.length;i++){
+// let count={}
+// for(i=0;i<arr.length;i++){
 
-  let item=arr[i]
-  if(count[item]){
+//   let item=arr[i]
+//   if(count[item]){
 
-    count[item] +=1
+//     count[item] +=1
+//   }
+//   else{
+
+//     count[item]=1
+//   }
+// } 
+
+// console.log(count)
+
+
+
+arr=[]
+
+for(i=1;i<=100;i++){
+
+  if(i%3==0 &&  i%5==0){
+
+    arr.push("buzzfizz")
+  }
+  else if(i%3==0){
+
+    arr.push("fizz")
+  }
+  else if(i%5==0){
+
+    arr.push("buzz")
   }
   else{
 
-    count[item]=1
+    arr.push(i)
   }
-} 
+}
 
-console.log(count)
-
-
+console.log(arr)
