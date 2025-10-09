@@ -218,26 +218,66 @@
 
 
 
-arr=[]
+// arr=[]
 
-for(i=1;i<=100;i++){
+// for(i=1;i<=100;i++){
 
-  if(i%3==0 &&  i%5==0){
+//   if(i%3==0 &&  i%5==0){
 
-    arr.push("buzzfizz")
+//     arr.push("buzzfizz")
+//   }
+//   else if(i%3==0){
+
+//     arr.push("fizz")
+//   }
+//   else if(i%5==0){
+
+//     arr.push("buzz")
+//   }
+//   else{
+
+//     arr.push(i)
+//   }
+// }
+
+// console.log(arr)
+
+
+ 
+const providerData = [
+  {
+    airline_name: "IndiGo",
+    departure: "BLR",
+    arrival: "DEL",
+    flight_no: "6E 203",
+    price_inr: "6543"
+  },
+  {
+    carrier: "Air India",
+    from: "BOM",
+    to: "HYD",
+    flightNumber: "AI 511",
+    cost: 7200
+  },
+  {
+    flight: "SG 401",
+    dep: "MAA",
+    arr: "BLR",
+    airline: "SpiceJet",
+    fare: "5899"
   }
-  else if(i%3==0){
+];
 
-    arr.push("fizz")
-  }
-  else if(i%5==0){
+const userNames=providerData.map(user=>({
 
-    arr.push("buzz")
-  }
-  else{
+  airline: user.airline_name,
+ flightNumber: user.flight_no,
+  from: user.departure,
+  to: user.arrival,
+  price: user.price_inr,
+  airline: user.carrier
 
-    arr.push(i)
-  }
-}
 
-console.log(arr)
+}));
+
+console.log(userNames)
